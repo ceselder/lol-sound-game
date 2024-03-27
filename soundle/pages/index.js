@@ -216,7 +216,7 @@ export default function Home({ champs }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
   const [currentGuess, setCurrentGuess] = useState("");
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(100);
 
   const audioRef = useRef();
   const audioDingRef = useRef();
@@ -250,8 +250,8 @@ export default function Home({ champs }) {
 
     setCurrentIndex((old) => {
       const correctAnswer =
-        `${champs[old].champ} ${champs[old].ability}`.trim();
-      const currGuess = inputRef.current.value.trim();
+        `${champs[old].champ} ${champs[old].ability}`.trim().replace(/'/g, "").toLowerCase();
+      const currGuess = inputRef.current.value.trim().replace(/'/g, "").toLowerCase();
       console.log(currGuess, correctAnswer);
 
       if (currGuess === correctAnswer) {
