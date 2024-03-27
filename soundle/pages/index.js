@@ -287,6 +287,7 @@ export default function Home({ champs }) {
     setInterval(() => {
       setTimeLeft((old) => {
         if (old == 0) {
+          alert("final score was " + currentScore)
           return old;
           
         }
@@ -300,9 +301,10 @@ export default function Home({ champs }) {
 
   return (
     <div className="flex flex-row w-full h-screen bg-gray-200 justify-center">
-      <div className="flex flex-col pt-36 items-center text-3xl">
+      <div className="flex flex-col pt-36 items-center text-4xl">
         {
           <>
+          <div className="font-bold text-8xl mb-8">Lol Sound Game XDDD</div>
             <div className="flex flex-row gap-x-[4rem]">
               <div className="w-32 flex flex-col items-center">
                 <p className="">Time:</p>
