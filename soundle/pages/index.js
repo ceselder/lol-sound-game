@@ -183,7 +183,7 @@ function getRandomAbility() {
   const matchingFiles = [];
 
   fs.readdirSync(
-    "/home/celeste/Documents/side-projects/soundle/soundle/public/sounds"
+    "./public/sounds"
   ).forEach((file) => {
     if (file.startsWith(`${champ}_Original_${ability}`)) {
       matchingFiles.push(file);
