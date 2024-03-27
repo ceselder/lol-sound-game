@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "download": "^8.0.0",
+    "puppeteer": "^22.6.1"
+  }
+}
